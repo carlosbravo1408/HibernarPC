@@ -36,12 +36,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rdb_hibernar = new System.Windows.Forms.RadioButton();
             this.rdb_reiniciar = new System.Windows.Forms.RadioButton();
+            this.rdb_shutdown = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(13, 13);
+            this.numericUpDown1.Location = new System.Drawing.Point(13, 38);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -64,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 15);
+            this.label1.Location = new System.Drawing.Point(75, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 1;
@@ -72,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 10);
+            this.button1.Location = new System.Drawing.Point(134, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -89,7 +90,7 @@
             // 
             this.rdb_hibernar.AutoSize = true;
             this.rdb_hibernar.Checked = true;
-            this.rdb_hibernar.Location = new System.Drawing.Point(125, 1);
+            this.rdb_hibernar.Location = new System.Drawing.Point(12, 12);
             this.rdb_hibernar.Name = "rdb_hibernar";
             this.rdb_hibernar.Size = new System.Drawing.Size(65, 17);
             this.rdb_hibernar.TabIndex = 3;
@@ -101,7 +102,7 @@
             // rdb_reiniciar
             // 
             this.rdb_reiniciar.AutoSize = true;
-            this.rdb_reiniciar.Location = new System.Drawing.Point(125, 24);
+            this.rdb_reiniciar.Location = new System.Drawing.Point(78, 12);
             this.rdb_reiniciar.Name = "rdb_reiniciar";
             this.rdb_reiniciar.Size = new System.Drawing.Size(66, 17);
             this.rdb_reiniciar.TabIndex = 3;
@@ -109,12 +110,25 @@
             this.rdb_reiniciar.UseVisualStyleBackColor = true;
             this.rdb_reiniciar.CheckedChanged += new System.EventHandler(this.rdb_reiniciar_CheckedChanged);
             // 
+            // rdb_shutdown
+            // 
+            this.rdb_shutdown.AutoSize = true;
+            this.rdb_shutdown.Location = new System.Drawing.Point(150, 12);
+            this.rdb_shutdown.Name = "rdb_shutdown";
+            this.rdb_shutdown.Size = new System.Drawing.Size(59, 17);
+            this.rdb_shutdown.TabIndex = 4;
+            this.rdb_shutdown.TabStop = true;
+            this.rdb_shutdown.Text = "Apagar";
+            this.rdb_shutdown.UseVisualStyleBackColor = true;
+            this.rdb_shutdown.CheckedChanged += new System.EventHandler(this.rdb_shutdown_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(276, 44);
+            this.ClientSize = new System.Drawing.Size(217, 71);
+            this.Controls.Add(this.rdb_shutdown);
             this.Controls.Add(this.rdb_reiniciar);
             this.Controls.Add(this.rdb_hibernar);
             this.Controls.Add(this.button1);
@@ -126,6 +140,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hibernar en...";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,6 +155,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RadioButton rdb_hibernar;
         private System.Windows.Forms.RadioButton rdb_reiniciar;
+        private System.Windows.Forms.RadioButton rdb_shutdown;
     }
 }
 
